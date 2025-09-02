@@ -19,17 +19,21 @@ const Hero = () => {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="hero-text">Software Developer</span>
+          <span className="text-foreground">ARULKUMAR</span>
           <br />
-          <span className="text-foreground">.NET Specialist</span>
+          <span className="hero-text">MUTHUSAMI</span>
         </h1>
         
+        <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
+          Full Stack .NET Developer
+        </h2>
+        
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Crafting robust, scalable applications with expertise in .NET Framework, 
-          C#, and modern web technologies.
+          3+ years of experience building scalable web applications and RESTful APIs using 
+          C#, ASP.NET Core, SQL Server, and modern frontend technologies.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <Button 
             onClick={scrollToAbout}
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
@@ -42,6 +46,21 @@ const Hero = () => {
           >
             Download Resume
           </Button>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <span>📧</span>
+            <span>arulkumar1062000@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span>📱</span>
+            <span>+91 6383254196</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span>📍</span>
+            <span>Ready to relocate</span>
+          </div>
         </div>
       </div>
     </section>

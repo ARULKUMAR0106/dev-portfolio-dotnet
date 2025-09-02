@@ -1,25 +1,25 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior .NET Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
-      description: "Lead development of enterprise applications using .NET Framework and .NET Core. Architected scalable solutions serving 10,000+ users.",
-      technologies: [".NET Core", "C#", "Azure", "SQL Server", "React"]
+      title: "Software Developer",
+      company: "Spac Softwares, Tamil Nadu, India",
+      period: "May 2024 - Present",
+      description: "Developed and maintained ERP modules using .NET Core 8, C#, SQL Server, and WPF, ensuring scalability, stability, and smooth system performance. Designed RESTful APIs and integrated third-party systems for seamless data exchange.",
+      technologies: [".NET Core 8", "C#", "SQL Server", "WPF", "RESTful APIs", "Git"]
     },
     {
-      title: ".NET Developer",
-      company: "Digital Innovations Ltd.",
-      period: "2020 - 2022",
-      description: "Developed and maintained web applications using ASP.NET MVC. Improved system performance by 40% through optimization.",
-      technologies: ["ASP.NET MVC", "Entity Framework", "JavaScript", "Bootstrap"]
+      title: "Associate Developer",
+      company: "Laserbeam Software, Tamil Nadu, India",
+      period: "June 2022 - February 2024",
+      description: "Developed and maintained ASP.NET applications in C# with frontend and backend services. Optimized SQL Server queries and stored procedures to enhance database performance. Implemented authentication mechanisms and coordinated AWS S3 report handling.",
+      technologies: ["ASP.NET", "C#", "HTML", "CSS", "JavaScript", "SQL Server", "AWS S3", "Jira"]
     },
     {
-      title: "Junior Software Developer",
-      company: "StartUp Dynamics",
-      period: "2019 - 2020",
-      description: "Built RESTful APIs and desktop applications. Collaborated with cross-functional teams to deliver quality software solutions.",
-      technologies: [".NET Framework", "Web API", "WPF", "MySQL"]
+      title: "Full-stack Developer Intern",
+      company: "Wisetech Source, Tamil Nadu, India",
+      period: "April 2022 - June 2022",
+      description: "Developed a CRUD-based web application using ASP.NET Core MVC and SQL Server, gaining practical experience in full-stack .NET development. Assisted in troubleshooting and debugging application errors during development.",
+      technologies: ["ASP.NET Core MVC", "SQL Server", "CRUD Operations", "Debugging"]
     }
   ];
 

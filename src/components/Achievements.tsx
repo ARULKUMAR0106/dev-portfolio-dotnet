@@ -1,40 +1,40 @@
 const Achievements = () => {
   const achievements = [
     {
-      title: "Microsoft Certified: Azure Developer Associate",
-      description: "Demonstrated expertise in developing cloud applications and services on Microsoft Azure platform.",
-      year: "2023",
+      title: ".NET Core 8 WebAPI with Entity Framework Core",
+      description: "Certified in advanced .NET Core 8 development with Entity Framework Core, demonstrating expertise in modern web API development.",
+      year: "2024",
       icon: "🏆"
     },
     {
-      title: "Best Performance Optimization Project",
-      description: "Improved application response time by 60% through database optimization and caching strategies.",
-      year: "2022",
+      title: "ISO 27001:2013 - Awareness Workshop",
+      description: "Completed ISO 27001:2013 awareness training, gaining knowledge in information security management systems and best practices.",
+      year: "2024",
+      icon: "🔒"
+    },
+    {
+      title: "ERP Module Development",
+      description: "Successfully developed and maintained complex ERP modules using .NET Core 8, ensuring scalability and system stability.",
+      year: "2024",
+      icon: "⚙️"
+    },
+    {
+      title: "Database Performance Optimization",
+      description: "Optimized SQL Server queries and stored procedures, achieving significant performance improvements in production environments.",
+      year: "2023",
       icon: "⚡"
     },
     {
-      title: "Team Leadership Excellence",
-      description: "Successfully led a team of 5 developers to deliver a complex enterprise solution 2 weeks ahead of schedule.",
-      year: "2022",
-      icon: "👥"
+      title: "Third-party System Integration",
+      description: "Designed and implemented seamless integrations with third-party systems using RESTful APIs and secure data exchange protocols.",
+      year: "2023",
+      icon: "🔗"
     },
     {
-      title: "Open Source Contributor",
-      description: "Active contributor to .NET community projects with 100+ GitHub stars and meaningful contributions.",
-      year: "2021-Present",
-      icon: "🔓"
-    },
-    {
-      title: "Innovation Award",
-      description: "Recognized for implementing automated deployment pipeline that reduced deployment time by 80%.",
-      year: "2021",
-      icon: "💡"
-    },
-    {
-      title: "Client Satisfaction Excellence",
-      description: "Maintained 98% client satisfaction rate across all project deliveries with zero critical bugs in production.",
-      year: "2020-Present",
-      icon: "⭐"
+      title: "Bachelor of Science in Physics",
+      description: "Graduated from Bharathidasan University (Periyar E.V.R. College), building strong analytical and problem-solving foundations.",
+      year: "2017-2020",
+      icon: "🎓"
     }
   ];
 
@@ -78,12 +78,28 @@ const Achievements = () => {
               Ready to discuss your next project or opportunity?
             </p>
             <div className="flex gap-4 justify-center">
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-colors">
+              <a 
+                href="mailto:arulkumar1062000@gmail.com"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-colors"
+              >
                 Contact Me
-              </button>
-              <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-2 rounded-lg transition-colors">
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/arulkumar-m"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-2 rounded-lg transition-colors"
+              >
                 LinkedIn
-              </button>
+              </a>
+              <a 
+                href="https://github.com/ARULKUMAR0106"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-2 rounded-lg transition-colors"
+              >
+                GitHub
+              </a>
             </div>
           </div>
         </div>

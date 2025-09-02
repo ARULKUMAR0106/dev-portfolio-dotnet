@@ -1,30 +1,30 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: ".NET Technologies",
-      skills: [
-        ".NET Framework", ".NET Core", "ASP.NET", "ASP.NET MVC", 
-        "Web API", "Entity Framework", "LINQ", "WPF"
-      ]
-    },
-    {
       title: "Programming Languages",
       skills: [
-        "C#", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS3", "Python"
-      ]
-    },
-    {
-      title: "Databases & Tools",
-      skills: [
-        "SQL Server", "Azure SQL", "MySQL", "MongoDB", "Redis", 
-        "Visual Studio", "Git", "Azure DevOps"
+        "C#", "SQL", "JavaScript", "HTML5", "CSS3"
       ]
     },
     {
       title: "Frameworks & Libraries",
       skills: [
-        "React", "Angular", "Bootstrap", "Tailwind CSS", "jQuery", 
-        "SignalR", "AutoMapper", "NUnit"
+        ".NET 8", "ASP.NET Core", "Entity Framework Core", "Web API", 
+        "LINQ", "WPF", "XAML"
+      ]
+    },
+    {
+      title: "Databases & Cloud",
+      skills: [
+        "Microsoft SQL Server", "Stored Procedures", "Views", "Triggers", 
+        "Performance Tuning", "Azure DevOps", "AWS S3"
+      ]
+    },
+    {
+      title: "DevOps & Security",
+      skills: [
+        "Git", "Postman", "Visual Studio", "VS Code", 
+        "JWT", "OAuth2.0", "Role-based Access Control", "Agile/Scrum"
       ]
     }
   ];
@@ -61,10 +61,10 @@ const Skills = () => {
         <div className="mt-12 text-center">
           <div className="portfolio-card inline-block">
             <h3 className="text-lg font-semibold text-primary mb-2">
-              Always Learning
+              Current Focus
             </h3>
             <p className="text-muted-foreground">
-              Currently exploring: .NET 8, Blazor, Microservices, Cloud Architecture
+              Specializing in: .NET Core 8, ERP Development, RESTful APIs, Performance Optimization
             </p>
           </div>
         </div>

@@ -14,26 +14,27 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-primary">
-              .NET Framework Expert
+              Full Stack .NET Developer
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With extensive experience in .NET Framework development, I specialize in building 
-              enterprise-grade applications that are scalable, maintainable, and performant. 
-              My expertise spans across web applications, desktop solutions, and API development.
+              I am a dedicated Full Stack .NET Developer with 3+ years of experience in building 
+              scalable web applications and RESTful APIs. My expertise spans across C#, ASP.NET Core, 
+              SQL Server, and modern frontend technologies, with a proven track record of delivering 
+              end-to-end solutions in fast-paced environments.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm passionate about clean code, best practices, and staying up-to-date with 
-              the latest technologies in the .NET ecosystem. I enjoy solving complex problems 
-              and delivering solutions that make a real impact.
+              I specialize in troubleshooting, performance optimization, and implementing secure 
+              authentication mechanisms. My experience includes working with ERP modules, 
+              third-party system integrations, and cloud platforms like Azure and AWS.
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="portfolio-card">
-                <div className="text-3xl font-bold text-primary mb-1">5+</div>
+                <div className="text-3xl font-bold text-primary mb-1">3+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="portfolio-card">
-                <div className="text-3xl font-bold text-primary mb-1">50+</div>
+                <div className="text-3xl font-bold text-primary mb-1">25+</div>
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
             </div>
