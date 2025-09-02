@@ -3,7 +3,7 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        "C#", "SQL", "JavaScript", "HTML5", "CSS3"
+        "C#", "Python", "SQL", "JavaScript", "HTML5", "CSS3"
       ]
     },
     {
@@ -21,10 +21,10 @@ const Skills = () => {
       ]
     },
     {
-      title: "DevOps & Security",
+      title: "DevOps & Emerging Tech",
       skills: [
         "Git", "Postman", "Visual Studio", "VS Code", 
-        "JWT", "OAuth2.0", "Role-based Access Control", "Agile/Scrum"
+        "JWT", "OAuth2.0", "Role-based Access Control", "Agile/Scrum", "AI Prompting"
       ]
     }
   ];
