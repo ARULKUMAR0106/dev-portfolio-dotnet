@@ -38,16 +38,16 @@ const Hero = () => {
             onClick={scrollToAbout}
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
           >
-            View My Work
+            About My Work
           </Button>
-          <Button 
+          {/* <Button 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-      <a href={resumePDF} target="_blank" rel="noopener noreferrer">
+      <a href={resumePDF} >
    Resume
 </a>
-          </Button>
+          </Button> */}
                     <Button 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
