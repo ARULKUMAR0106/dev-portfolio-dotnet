@@ -25,7 +25,7 @@ const Hero = () => {
         </h1>
         
         <div className="typing-animation text-2xl md:text-3xl font-semibold text-primary mb-4 inline-block">
-          Full Stack .NET Developer
+          Software Developer
         </div>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
