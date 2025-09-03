@@ -24,9 +24,9 @@ const Hero = () => {
           <span className="hero-text">MUTHUSAMI</span>
         </h1>
         
-        <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
+        <div className="typing-animation text-2xl md:text-3xl font-semibold text-primary mb-4 inline-block">
           Full Stack .NET Developer
-        </h2>
+        </div>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
           3+ years of experience building scalable web applications and RESTful APIs using 

@@ -8,47 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 40% 95%;
-    --foreground: 220 20% 15%;
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
 
-    --card: 220 50% 98%;
-    --card-foreground: 220 20% 15%;
+    --card: 220 13% 9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 50% 98%;
-    --popover-foreground: 220 20% 15%;
+    --popover: 220 13% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 260 100% 80%;
-    --primary-foreground: 220 20% 15%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 200 100% 85%;
-    --secondary-foreground: 220 20% 15%;
+    --secondary: 220 14% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 30% 90%;
-    --muted-foreground: 220 20% 45%;
+    --muted: 220 13% 12%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 320 100% 85%;
-    --accent-foreground: 220 20% 15%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 13% 9%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 220 50% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 30% 85%;
-    --input: 220 50% 96%;
-    --ring: 260 100% 80%;
+    --border: 220 14% 16%;
+    --input: 220 13% 12%;
+    --ring: 142 76% 36%;
 
     --radius: 1rem;
     
-    /* Glassmorphism design tokens */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    --hero-gradient: linear-gradient(135deg, rgba(147, 51, 234, 0.8), rgba(236, 72, 153, 0.8), rgba(59, 130, 246, 0.8));
-    --card-glass: rgba(255, 255, 255, 0.15);
-    --glow-primary: 0 0 40px rgba(147, 51, 234, 0.4);
-    --glow-accent: 0 0 30px rgba(236, 72, 153, 0.3);
+    /* Enhanced design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(38 92% 50%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(220 13% 12%) 0%, hsl(220 14% 16%) 100%);
+    --glow-primary: 0 0 40px hsl(142 76% 36% / 0.4);
+    --glow-accent: 0 0 30px hsl(38 92% 50% / 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --section-spacing: 6rem;
-    --backdrop-blur: blur(12px);
 
     --sidebar-background: 0 0% 98%;
 
@@ -112,9 +108,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   
@@ -133,31 +127,26 @@ All colors MUST be HSL.
   }
   
   .portfolio-card {
-    background: var(--card-glass);
-    backdrop-filter: var(--backdrop-blur);
-    border: 1px solid var(--glass-border);
+    background: var(--card-gradient);
+    border: 1px solid hsl(var(--border));
     @apply rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl;
-    box-shadow: var(--glass-shadow);
+    box-shadow: var(--glow-primary);
     animation: float 6s ease-in-out infinite;
   }
   
   .portfolio-card:hover {
-    box-shadow: var(--glow-primary);
+    box-shadow: var(--glow-accent);
     transform: translateY(-8px) scale(1.02);
-    background: rgba(255, 255, 255, 0.25);
   }
   
   .skill-badge {
-    background: var(--glass-bg);
-    backdrop-filter: var(--backdrop-blur);
-    border: 1px solid var(--glass-border);
-    @apply text-foreground px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
-    box-shadow: var(--glass-shadow);
+    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+    border: 1px solid hsl(var(--primary) / 0.2);
     animation: float 4s ease-in-out infinite;
   }
   
   .skill-badge:hover {
-    background: rgba(255, 255, 255, 0.3);
+    @apply bg-primary text-primary-foreground;
     transform: translateY(-2px);
     box-shadow: var(--glow-accent);
   }
@@ -170,11 +159,18 @@ All colors MUST be HSL.
     animation: glow 3s ease-in-out infinite alternate;
   }
   
+  .typing-animation {
+    overflow: hidden;
+    border-right: 3px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typewriter 4s steps(40) 1s forwards, blink 1s infinite;
+  }
+  
   .glass-nav {
-    background: var(--glass-bg);
-    backdrop-filter: var(--backdrop-blur);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
+    background: hsl(var(--background) / 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(var(--border));
+    box-shadow: var(--glow-primary);
   }
   
   .floating-element {
@@ -202,10 +198,28 @@ All colors MUST be HSL.
   
   @keyframes glow {
     0% {
-      filter: drop-shadow(0 0 5px rgba(147, 51, 234, 0.5));
+      filter: drop-shadow(0 0 5px hsl(142 76% 36% / 0.5));
     }
     100% {
-      filter: drop-shadow(0 0 20px rgba(236, 72, 153, 0.8));
+      filter: drop-shadow(0 0 20px hsl(38 92% 50% / 0.8));
+    }
+  }
+  
+  @keyframes typewriter {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 50% {
+      border-color: hsl(var(--primary));
+    }
+    51%, 100% {
+      border-color: transparent;
     }
   }
   
