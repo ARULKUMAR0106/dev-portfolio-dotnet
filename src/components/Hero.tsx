@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-bg.jpg';
+
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -8,14 +8,14 @@ const Hero = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+  const heroImage="images/hero-bg.jpg"
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70"  />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -44,7 +44,11 @@ const Hero = () => {
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-            Download Resume
+              <a id="resume-link" 
+    href="Resume/ARULKUMAR.pdf" 
+    download="ARULKUMAR_CV.pdf" 
+  
+  >Download Resume</a>
           </Button>
         </div>
         

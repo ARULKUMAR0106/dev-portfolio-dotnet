@@ -1,5 +1,11 @@
 const Achievements = () => {
   const achievements = [
+        {
+      title: "ERP Module Development",
+      description: "Successfully developed from groudup and maintained complex ERP modules using .NET Core 8, ensuring scalability and system stability.",
+      year: "2025",
+      icon: "⚙️"
+    },
     {
       title: ".NET Core 8 WebAPI with Entity Framework Core",
       description: "Certified in advanced .NET Core 8 development with Entity Framework Core, demonstrating expertise in modern web API development.",
@@ -12,12 +18,7 @@ const Achievements = () => {
       year: "2024",
       icon: "🔒"
     },
-    {
-      title: "ERP Module Development",
-      description: "Successfully developed and maintained complex ERP modules using .NET Core 8, ensuring scalability and system stability.",
-      year: "2024",
-      icon: "⚙️"
-    },
+
     {
       title: "Database Performance Optimization",
       description: "Optimized SQL Server queries and stored procedures, achieving significant performance improvements in production environments.",
@@ -30,12 +31,7 @@ const Achievements = () => {
       year: "2023",
       icon: "🔗"
     },
-    {
-      title: "Bachelor of Science in Physics",
-      description: "Graduated from Bharathidasan University (Periyar E.V.R. College), building strong analytical and problem-solving foundations.",
-      year: "2017-2020",
-      icon: "🎓"
-    }
+ 
   ];
 
   return (
@@ -79,7 +75,7 @@ const Achievements = () => {
             </p>
             <div className="flex gap-4 justify-center">
               <a 
-                href="mailto:arulkumar1062000@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=arulkumar1062000@gmail.com"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-colors"
               >
                 Contact Me
