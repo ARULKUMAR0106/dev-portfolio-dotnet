@@ -48,6 +48,14 @@ const Hero = () => {
    Resume
 </a>
           </Button>
+                    <Button 
+            variant="outline" 
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
+          >
+      <a href={resumePDF} download="ARULKUMAR_CV.pdf">
+  Download Resume
+</a>
+          </Button>
         </div>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground">
