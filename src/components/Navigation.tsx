@@ -40,16 +40,16 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold hero-text">Portfolio</div>
+          <div className="text-xl font-bold hero-text">Arulkumar</div>
 
           {/* Desktop & Mobile nav items */}
           <div
             id="nav-items"
             className={`${
-              menuOpen ? 'flex flex-col space-y-4 absolute top-full left-0 w-full bg-background/90 backdrop-blur-md border-t border-border md:static md:flex md:flex-row md:space-x-8 md:bg-transparent md:border-0 md:space-y-0' 
+              menuOpen ? 'flex flex-col space-y-4 absolute top-full left-0 w-full glass-nav border-t border-glass-border md:static md:flex md:flex-row md:space-x-8 md:bg-transparent md:border-0 md:space-y-0' 
               : 'hidden md:flex md:space-x-8'
             }`}
           >
