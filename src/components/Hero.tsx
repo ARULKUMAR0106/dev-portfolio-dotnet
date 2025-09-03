@@ -44,7 +44,7 @@ const Hero = () => {
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-      <a href={resumePDF} >
+      <a href={resumePDF}  >
    Resume
 </a>
           </Button> */}
