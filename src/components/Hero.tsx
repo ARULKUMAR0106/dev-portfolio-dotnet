@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-
+import resumePDF from '/src/assets/Resume/ARULKUMAR_CV.pdf';
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
@@ -44,11 +44,9 @@ const Hero = () => {
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-              <a id="resume-link" 
-    href="Resume/ARULKUMAR.pdf" 
-    download="ARULKUMAR_CV.pdf" 
-  
-  >Download Resume</a>
+      <a href={resumePDF} target="_blank" rel="noopener noreferrer">
+   Resume
+</a>
           </Button>
         </div>
         
