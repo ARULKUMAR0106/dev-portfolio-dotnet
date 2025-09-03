@@ -47,7 +47,7 @@ const Skills = () => {
               <h3 className="text-xl font-semibold text-primary mb-4" style={{ textDecoration: 'underline' }}>
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 pt-3 md:pt-5 lg:pt-8" >
                 {category.skills.map((skill, skillIndex) => (
                   <span key={skillIndex} className="skill-badge">
                     {skill}

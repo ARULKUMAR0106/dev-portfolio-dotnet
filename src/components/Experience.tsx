@@ -56,7 +56,7 @@ const Experience = () => {
                 {exp.description}
               </p>
               
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 pt-3 md:pt-5 lg:pt-8">
                 {exp.technologies.map((tech, techIndex) => (
                   <span key={techIndex} className="skill-badge">
                     {tech}
