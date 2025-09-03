@@ -8,12 +8,12 @@ const Hero = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const heroImage="images/hero-bg.jpg"
+  const heroImage="src/assets/images/hero-bg.jpg"
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${heroImage})` ,transform: 'scale(1.1)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70"  />
       

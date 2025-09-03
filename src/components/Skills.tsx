@@ -44,7 +44,7 @@ const Skills = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div key={index} className="portfolio-card">
-              <h3 className="text-xl font-semibold text-primary mb-4">
+              <h3 className="text-xl font-semibold text-primary mb-4" style={{ textDecoration: 'underline' }}>
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
