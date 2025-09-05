@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
@@ -37,7 +37,7 @@ All colors MUST be HSL.
     --ring: 214 95% 65%;
 
     --radius: 1rem;
-    
+
     /* Enhanced professional blue design tokens */
     --hero-gradient: linear-gradient(135deg, hsl(214 95% 65%) 0%, hsl(200 95% 70%) 100%);
     --card-gradient: linear-gradient(145deg, hsl(217 33% 12%) 0%, hsl(217 33% 15%) 100%);
@@ -111,7 +111,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -121,11 +121,11 @@ All colors MUST be HSL.
   .portfolio-section {
     @apply py-24 px-6 relative;
   }
-  
+
   .section-container {
     @apply max-w-6xl mx-auto;
   }
-  
+
   .portfolio-card {
     background: var(--card-gradient);
     border: 1px solid hsl(var(--border));
@@ -133,54 +133,71 @@ All colors MUST be HSL.
     box-shadow: var(--glow-primary);
     animation: float 6s ease-in-out infinite;
   }
-  
+
   .portfolio-card:hover {
     box-shadow: var(--glow-accent);
     transform: translateY(-8px) scale(1.02);
   }
-  
+
   .skill-badge {
     @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
     border: 1px solid hsl(var(--primary) / 0.2);
     animation: float 4s ease-in-out infinite;
   }
-  
+
   .skill-badge:hover {
     @apply bg-primary text-primary-foreground;
     transform: translateY(-2px);
     box-shadow: var(--glow-accent);
   }
-  
-  .hero-text {
+
+  .glow-text {
     background: var(--hero-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: glow 3s ease-in-out infinite alternate;
   }
-  
+.hero-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1.5px transparent;
+  background: linear-gradient(90deg, #3ab1b9, #7de3f5, #65cff0, #59d9f0);
+  background-size: 400% 100%;  /* 👈 Bigger gradient area */
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: stroke-move 8s linear infinite;
+}
+
+@keyframes stroke-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 500% 50%; } /* 👈 moves continuously */
+}
+
   .typing-animation {
     overflow: hidden;
-    border-right: 3px solid hsl(var(--primary));
+    border-right: 1px solid hsl(var(--primary));
     white-space: nowrap;
-    animation: typewriter 4s steps(40) 1s forwards, blink 1s infinite;
+
+    animation: typewriter 4s steps(40) 1s forwards, blink 1s infinite ;
   }
-  
+
   .glass-nav {
     background: hsl(var(--background) / 0.9);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid hsl(var(--border));
     box-shadow: var(--glow-primary);
   }
-  
+
   .floating-element {
     animation: float 8s ease-in-out infinite;
   }
-  
+
   .floating-element:nth-child(2n) {
     animation-delay: -2s;
   }
-  
+
   .floating-element:nth-child(3n) {
     animation-delay: -4s;
   }
@@ -195,7 +212,7 @@ All colors MUST be HSL.
       transform: translateY(-20px);
     }
   }
-  
+
   @keyframes glow {
     0% {
       filter: drop-shadow(0 0 5px hsl(214 95% 65% / 0.5));
@@ -204,7 +221,7 @@ All colors MUST be HSL.
       filter: drop-shadow(0 0 20px hsl(200 95% 70% / 0.7));
     }
   }
-  
+
   @keyframes typewriter {
     0% {
       width: 0;
@@ -213,7 +230,7 @@ All colors MUST be HSL.
       width: 100%;
     }
   }
-  
+
   @keyframes blink {
     0%, 50% {
       border-color: hsl(var(--primary));
@@ -222,7 +239,7 @@ All colors MUST be HSL.
       border-color: transparent;
     }
   }
-  
+
   @keyframes pulse-glass {
     0%, 100% {
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);

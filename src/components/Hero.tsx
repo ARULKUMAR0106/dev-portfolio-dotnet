@@ -13,6 +13,7 @@ const Hero = () => {
   };
 
   return (
+    
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
       {/* <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
@@ -25,7 +26,7 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           <span className="text-foreground">ARULKUMAR</span>
           <br />
-          <span className="hero-text">MUTHUSAMI</span>
+          <span className="glow-text">MUTHUSAMI</span>
         </h1>
         
         <div className="typing-animation text-2xl md:text-3xl font-semibold text-primary mb-4 inline-block">
