@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 
 import resumePDF from '/src/assets/Resume/ARULKUMAR_CV.pdf';
+  import  heroImage from '/src/assets/images/herobg.jpg';
+  import { Link } from "react-router-dom";
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
@@ -8,7 +10,7 @@ const Hero = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const heroImage="/src/assets/images/herobg.jpg"
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
       <div 
@@ -52,10 +54,19 @@ const Hero = () => {
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-      <a href={resumePDF} download="ARULKUMAR_CV.pdf">
+      <a href={resumePDF} target='_blank' rel="noopener noreferrer" download="ARULKUMAR_CV.pdf">
   Download Resume
 </a>
           </Button>
+                    <Button 
+            variant="outline" 
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
+          >
+               <Link target='_blank' to="/resume" className="text-blue-500 hover:bg-primary hover:text-primary-foreground ">
+  View Resume
+</Link>
+          </Button>
+
         </div>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground">
