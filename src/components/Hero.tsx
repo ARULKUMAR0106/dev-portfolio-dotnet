@@ -8,7 +8,7 @@ const Hero = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const heroImage="/src/assets/images/hero-bg.jpg"
+  const heroImage="/src/assets/images/herobg.jpg"
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
       <div 
