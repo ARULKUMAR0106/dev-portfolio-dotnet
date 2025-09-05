@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import resumePDF from '/src/assets/Resume/ARULKUMAR_CV.pdf';
   import  heroImage from '/src/assets/images/herobg.jpg';
   import { Link } from "react-router-dom";
+  
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
@@ -13,10 +14,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
-      <div 
+      {/* <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: `url(${heroImage})` ,transform: 'scale(1.1)' }}
-      />
+      /> */}
+
       <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70"  />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">

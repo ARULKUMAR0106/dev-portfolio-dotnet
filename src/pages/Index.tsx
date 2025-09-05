@@ -8,6 +8,7 @@ import FadeInSection from '@/components/FadeInSection';
 
 const Index = () => {
   return (
+    
     <div className="min-h-screen">
       <Navigation />
 
