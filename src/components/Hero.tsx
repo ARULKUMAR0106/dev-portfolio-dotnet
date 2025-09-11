@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-import resumePDF from '/src/assets/Resume/ARULKUMAR_CV.pdf';
+import resumePDF from '/src/assets/Resume/ARULKUMAR.pdf';
   import  heroImage from '/src/assets/images/herobg.jpg';
   import { Link } from "react-router-dom";
   
@@ -14,13 +14,17 @@ const Hero = () => {
 
   return (
     
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
+<section
+  id="home"
+  className="min-h-screen  flex items-center justify-center relative overflow-hidden "
+
+>
       {/* <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: `url(${heroImage})` ,transform: 'scale(1.1)' }}
       /> */}
 
-      <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70"  />
+      <div className="absolute inset-0 " />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -53,22 +57,27 @@ const Hero = () => {
    Resume
 </a>
           </Button> */}
+          <a href={resumePDF}  target='_blank' rel="noopener noreferrer" download="ARULKUMAR.pdf">
                     <Button 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-      <a href={resumePDF} target='_blank' rel="noopener noreferrer" download="ARULKUMAR_CV.pdf">
+      
   Download Resume
-</a>
+
           </Button>
+          </a>
+           <Link target='_blank' to="/resume"  className="">
                     <Button 
             variant="outline" 
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
+            className=" text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
           >
-               <Link target='_blank' to="/resume" className="text-blue-500 hover:bg-primary hover:text-primary-foreground ">
+              
   View Resume
-</Link>
+
           </Button>
+          </Link>
+                  
 
         </div>
         

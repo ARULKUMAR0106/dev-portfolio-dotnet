@@ -1,5 +1,5 @@
 import React from "react";
-import myResume from "@/assets//Resume/ARULKUMAR_CV.pdf"; // adjust path if needed
+import myResume from "@/assets//Resume/ARULKUMAR.pdf"; // adjust path if needed
 
 const ResumeViewer: React.FC = () => {
   return (

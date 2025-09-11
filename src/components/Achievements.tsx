@@ -66,7 +66,7 @@ const Achievements = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="portfolio-card inline-block">
+          <div className="portfolio-card-connect inline-block">
             <h3 className="text-lg font-semibold text-primary mb-2">
               Let's Connect
             </h3>

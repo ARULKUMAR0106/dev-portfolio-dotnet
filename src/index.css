@@ -133,7 +133,13 @@ All colors MUST be HSL.
     box-shadow: var(--glow-primary);
     animation: float 6s ease-in-out infinite;
   }
-
+.portfolio-card-connect{
+      background: var(--card-gradient);
+    border: 1px solid hsl(var(--border));
+    @apply rounded-2xl p-6 transition-all duration-500 hover:shadow-2xl;
+    box-shadow: var(--glow-primary);
+    animation: float 6s ease-in-out infinite;
+}
   .portfolio-card:hover {
     box-shadow: var(--glow-accent);
     transform: translateY(-8px) scale(1.02);
