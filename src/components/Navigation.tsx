@@ -1,9 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ChevronDown, Globe } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
   const location = useLocation();
+
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'pt', name: 'Português', flag: '🇵🇹' },
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+    { code: 'mt', name: 'Malti', flag: '🇲🇹' },
+    { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
+    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+    { code: 'no', name: 'Norsk', flag: '🇳🇴' },
+    { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === selectedLanguage) || languages[0];
 
   const navItems = [
     { id: '/', label: 'Home' },
@@ -21,9 +49,39 @@ const Navigation = () => {
     <nav className=" fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold hero-text hover:opacity-80 transition-opacity">
-            Arulkumar
-          </Link>
+          <div className="flex items-center space-x-4">
+            <Link to="/" className="text-xl font-bold hero-text hover:opacity-80 transition-opacity">
+              Arulkumar
+            </Link>
+            
+            {/* Language Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-2 p-2 hover:bg-secondary/50 rounded-lg transition-colors">
+                <Avatar className="w-6 h-6">
+                  <AvatarFallback className="text-xs bg-transparent">
+                    {currentLanguage.flag}
+                  </AvatarFallback>
+                </Avatar>
+                <ChevronDown className="w-4 h-4 text-muted-foreground" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48 bg-background/95 backdrop-blur-lg border border-border/50">
+                {languages.map((language) => (
+                  <DropdownMenuItem
+                    key={language.code}
+                    onClick={() => setSelectedLanguage(language.code)}
+                    className="flex items-center space-x-3 cursor-pointer hover:bg-secondary/50"
+                  >
+                    <Avatar className="w-5 h-5">
+                      <AvatarFallback className="text-xs bg-transparent">
+                        {language.flag}
+                      </AvatarFallback>
+                    </Avatar>
+                    <span className="text-sm">{language.name}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
           {/* Desktop & Mobile nav items */}
           <div
