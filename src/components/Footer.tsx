@@ -11,11 +11,11 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-primary mb-4">Contact Information</h3>
             <div className="flex items-center justify-center md:justify-start space-x-3 text-muted-foreground hover:text-foreground transition-colors">
               <Mail size={18} />
-              <span className="text-sm">arulkumardevan@gmail.com</span>
+              <span className="text-sm">arulkumar1062000@gmail.com</span>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3 text-muted-foreground hover:text-foreground transition-colors">
               <Phone size={18} />
-              <span className="text-sm">+91 9345 5555 22</span>
+              <span className="text-sm">+91 6383254196</span>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3 text-muted-foreground hover:text-foreground transition-colors">
               <MapPin size={18} />
@@ -50,7 +50,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-primary mb-4">Connect With Me</h3>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a 
-                href="https://linkedin.com/in/arulkumar-devan" 
+                href="https://www.linkedin.com/in/arulkumar-m"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://github.com/arulkumardevan" 
+                href="https://github.com/ARULKUMAR0106"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -66,7 +66,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:arulkumardevan@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=arulkumar1062000@gmail.com"
                 className="p-2 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 <Mail size={20} />
@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Arulkumar Devan. All rights reserved. Built with React & TypeScript.
+            © 2024 Arulkumar Muthusami. All rights reserved. Built with React & TypeScript.
           </p>
         </div>
       </div>
