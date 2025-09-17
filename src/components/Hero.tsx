@@ -43,12 +43,7 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Button 
-            onClick={scrollToAbout}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
-          >
-            About My Work
-          </Button>
+   
           {/* <Button 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
