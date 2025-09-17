@@ -1,14 +1,17 @@
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-secondary/50 border-t border-border mt-auto">
       <div className="section-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-primary mb-4">Contact Information</h3>
+            <h3 className="text-xl font-semibold text-primary mb-4">{t('footer.contact')}</h3>
             <div className="flex items-center justify-center md:justify-start space-x-3 text-muted-foreground hover:text-foreground transition-colors">
               <Mail size={18} />
               <span className="text-sm">arulkumar1062000@gmail.com</span>
@@ -25,29 +28,29 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-primary mb-4">Quick Links</h3>
+            <h3 className="text-xl font-semibold text-primary mb-4">{t('footer.quickLinks')}</h3>
             <div className="flex flex-col space-y-2">
               <Link to="/resume" className="text-muted-foreground hover:text-primary transition-colors">
-                Download Resume
+                {t('hero.downloadCV')}
               </Link>
               <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                Home
+                {t('home')}
               </Link>
               <Link to="/skills" className="text-muted-foreground hover:text-primary transition-colors">
-                Skills
+                {t('skills')}
               </Link>
               <Link to="/experience" className="text-muted-foreground hover:text-primary transition-colors">
-                Experience
+                {t('experience')}
               </Link>
               <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                About
+                {t('about')}
               </Link>
             </div>
           </div>
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-primary mb-4">Connect With Me</h3>
+            <h3 className="text-xl font-semibold text-primary mb-4">{t('footer.followMe')}</h3>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a 
                 href="https://www.linkedin.com/in/arulkumar-m"
@@ -80,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Arulkumar Muthusami. All rights reserved. Built with React & TypeScript.
+            © 2024 Arulkumar Muthusami. {t('footer.rights')} {t('footer.builtWith')}.
           </p>
         </div>
       </div>

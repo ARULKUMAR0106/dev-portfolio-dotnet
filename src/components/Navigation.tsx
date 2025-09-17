@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage, languages } from '@/contexts/LanguageContext';
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,65 +54,23 @@ const Navigation = () => {
                 <div className="px-3 py-2 text-xs font-medium text-muted-foreground border-b border-border/50 mb-1">
                   Select Language
                 </div>
-                {currentLanguage.code === 'en' ? (
-                  // Show all languages except current one
-                  <>
-                    {[
-                      { code: 'ar', name: 'العربية', flag: '🇸🇦', nativeName: 'Arabic' },
-                      { code: 'de', name: 'Deutsch', flag: '🇩🇪', nativeName: 'German' },
-                      { code: 'fr', name: 'Français', flag: '🇫🇷', nativeName: 'French' },
-                      { code: 'es', name: 'Español', flag: '🇪🇸', nativeName: 'Spanish' },
-                      { code: 'it', name: 'Italiano', flag: '🇮🇹', nativeName: 'Italian' },
-                      { code: 'ru', name: 'Русский', flag: '🇷🇺', nativeName: 'Russian' },
-                      { code: 'pt', name: 'Português', flag: '🇵🇹', nativeName: 'Portuguese' },
-                      { code: 'nl', name: 'Nederlands', flag: '🇳🇱', nativeName: 'Dutch' },
-                      { code: 'mt', name: 'Malti', flag: '🇲🇹', nativeName: 'Maltese' },
-                      { code: 'sv', name: 'Svenska', flag: '🇸🇪', nativeName: 'Swedish' },
-                      { code: 'da', name: 'Dansk', flag: '🇩🇰', nativeName: 'Danish' },
-                      { code: 'no', name: 'Norsk', flag: '🇳🇴', nativeName: 'Norwegian' },
-                      { code: 'fi', name: 'Suomi', flag: '🇫🇮', nativeName: 'Finnish' },
-                    ].map((language) => (
-                      <DropdownMenuItem
-                        key={language.code}
-                        onClick={() => setLanguage(language.code)}
-                        className="flex items-center space-x-3 cursor-pointer hover:bg-secondary/50 rounded-lg px-3 py-2 transition-colors duration-200"
-                      >
-                        <Avatar className="w-6 h-6 ring-1 ring-border">
-                          <AvatarFallback className="text-sm bg-gradient-to-br from-primary/10 to-accent/10">
-                            {language.flag}
-                          </AvatarFallback>
-                        </Avatar>
-                        <div className="flex flex-col">
-                          <span className="text-sm font-medium">{language.name}</span>
-                          <span className="text-xs text-muted-foreground">{language.nativeName}</span>
-                        </div>
-                      </DropdownMenuItem>
-                    ))
-                    }
-                  </>
-                ) : (
-                  // Show English and current language
-                  <>
-                    <DropdownMenuItem
-                      onClick={() => setLanguage('en')}
-                      className="flex items-center space-x-3 cursor-pointer hover:bg-secondary/50 rounded-lg px-3 py-2 transition-colors duration-200"
-                    >
-                      <Avatar className="w-6 h-6 ring-1 ring-border">
-                        <AvatarFallback className="text-sm bg-gradient-to-br from-primary/10 to-accent/10">
-                          🇺🇸
-                        </AvatarFallback>
-                      </Avatar>
-                      <div className="flex flex-col">
-                        <span className="text-sm font-medium">English</span>
-                        <span className="text-xs text-muted-foreground">English</span>
-                      </div>
-                    </DropdownMenuItem>
-                    <div className="border-t border-border/30 my-1" />
-                    <div className="px-3 py-1 text-xs text-primary font-medium">
-                      Current: {currentLanguage.name}
+                {languages.filter(lang => lang.code !== currentLanguage.code).map((language) => (
+                  <DropdownMenuItem
+                    key={language.code}
+                    onClick={() => setLanguage(language.code)}
+                    className="flex items-center space-x-3 cursor-pointer hover:bg-secondary/50 rounded-lg px-3 py-2 transition-colors duration-200"
+                  >
+                    <Avatar className="w-6 h-6 ring-1 ring-border">
+                      <AvatarFallback className="text-sm bg-gradient-to-br from-primary/10 to-accent/10">
+                        {language.flag}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">{language.name}</span>
+                      <span className="text-xs text-muted-foreground">{language.nativeName}</span>
                     </div>
-                  </>
-                )}
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
