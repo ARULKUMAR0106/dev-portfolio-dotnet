@@ -13,7 +13,7 @@ import AboutPage from "./pages/AboutPage";
 import AchievementsPage from "./pages/AchievementsPage";
 import ResumeViewer from "./components/ResumeViewer"; 
 import NotFound from "./pages/NotFound";
-
+import CustomCursor from "./contexts/CustomCursor";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,8 +22,11 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <HashRouter>   
+        <HashRouter>
           <div className="min-h-screen flex flex-col">
+            <div className="hidden md:block">
+              {/* <CustomCursor /> */}
+            </div>
             <Navigation />
             <main className="flex-1">
               <Routes>

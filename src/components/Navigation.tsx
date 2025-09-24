@@ -28,7 +28,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className=" fixed top-0 left-0 right-0 z-50 glass-nav">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -39,7 +39,7 @@ const Navigation = () => {
             {/* Language Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-2 p-2 hover:bg-secondary/50 rounded-full transition-all duration-300 border border-border/50">
-                <Avatar className="w-8 h-8 ring-2 ring-primary/20">
+                <Avatar className="w-6 h-6 ring-2 ring-primary/20">
                   <AvatarFallback className="text-lg bg-gradient-to-br from-primary/20 to-accent/20 text-foreground font-medium">
                     {currentLanguage.flag}
                   </AvatarFallback>
@@ -48,54 +48,60 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent 
                 align="start" 
-                className="w-56 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl p-2"
+                className="w-56 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl p-2
+                          max-h-60 overflow-y-auto"   
                 sideOffset={8}
               >
-                <div className="px-3 py-2 text-xs font-medium text-muted-foreground border-b border-border/50 mb-1">
+                <div className="px-3 py-2 text-xs font-medium text-muted-foreground border-b border-border/50 mb-1 sticky top-0 bg-background/95">
                   Select Language
                 </div>
-                {languages.filter(lang => lang.code !== currentLanguage.code).map((language) => (
-                  <DropdownMenuItem
-                    key={language.code}
-                    onClick={() => setLanguage(language.code)}
-                    className="flex items-center space-x-3 cursor-pointer hover:bg-secondary/50 rounded-lg px-3 py-2 transition-colors duration-200"
-                  >
-                    <Avatar className="w-6 h-6 ring-1 ring-border">
-                      <AvatarFallback className="text-sm bg-gradient-to-br from-primary/10 to-accent/10">
-                        {language.flag}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium">{language.name}</span>
-                      <span className="text-xs text-muted-foreground">{language.nativeName}</span>
-                    </div>
-                  </DropdownMenuItem>
+                {languages
+                  .filter(lang => lang.code !== currentLanguage.code)
+                  .map((language) => (
+                    <DropdownMenuItem
+                      key={language.code}
+                      onClick={() => setLanguage(language.code)}
+                      className="flex items-center space-x-3 cursor-pointer hover:bg-secondary/50 rounded-lg px-3 py-2 transition-colors duration-200"
+                    >
+                      <Avatar className="w-6 h-6 ring-1 ring-border">
+                        <AvatarFallback className="text-sm bg-gradient-to-br from-primary/10 to-accent/10">
+                          {language.flag}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="flex flex-col">
+                        <span className="text-sm font-medium">{language.name}</span>
+                        <span className="text-xs text-muted-foreground">{language.nativeName}</span>
+                      </div>
+                    </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
 
-          {/* Desktop & Mobile nav items */}
-          <div
-            id="nav-items"
-            className={`${
-              menuOpen ? 'flex flex-col space-y-2 absolute top-full left-0 w-full glass-nav border-t border-border z-40 p-4 md:static md:flex md:flex-row md:space-x-8 md:bg-transparent md:border-0 md:space-y-0 md:p-0' 
-              : 'hidden md:flex md:space-x-8'
-            }`}
-          >
-            {navItems.map((item) => (
-              <Link
-                key={item.id}
-                to={item.id}
-                onClick={handleNavClick}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-primary px-4 py-2 md:px-0 md:py-0 ${
-                  location.pathname === item.id ? 'text-primary' : 'text-muted-foreground'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+
+
+   {/* Desktop & Mobile nav items */}
+<div
+  id="nav-items"
+  className={`${
+    menuOpen
+      ? 'flex flex-col space-y-2 fixed top-16 left-0 w-full glass-nav border-t border-border z-50 p-4 md:static md:flex md:flex-row md:space-x-8 md:bg-transparent md:border-0 md:space-y-0 md:p-0'
+      : 'hidden md:flex md:space-x-8'
+  }`}
+>
+  {navItems.map((item) => (
+    <Link
+      key={item.id}
+      to={item.id}
+      onClick={handleNavClick}
+      className={` text-sm font-medium transition-colors duration-300 hover:text-primary px-4 py-2 md:px-0 md:py-0 ${
+        location.pathname === item.id ? 'text-primary' : 'text-muted-foreground'
+      }`}
+    >
+      {item.label}
+    </Link>
+  ))}
+</div>
 
           {/* Hamburger menu button */}
           <div className="md:hidden">

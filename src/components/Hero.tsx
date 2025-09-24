@@ -3,6 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import resumePDF from '/src/assets/Resume/ARULKUMAR.pdf';
 import heroImage from '/src/assets/images/herobg.jpg';
 import { Link } from "react-router-dom";
+import TorchLight from '@/contexts/TorchLight';
   
 const Hero = () => {
   const { t } = useLanguage();
@@ -14,12 +15,13 @@ const Hero = () => {
   className="min-h-screen  flex items-center justify-center relative overflow-hidden "
 
 >
+     <TorchLight />
       {/* <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: `url(${heroImage})` ,transform: 'scale(1.1)' }}
       /> */}
 
-      <div className="absolute inset-0 " />
+      <div className="absolute inset-0  " />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -77,7 +79,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-2">
             <span>📍</span>
-            <span>Ready to relocate</span>
+            <span>Open to relocate</span>
           </div>
         </div>
       </div>
