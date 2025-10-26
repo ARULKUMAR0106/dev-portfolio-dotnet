@@ -15,7 +15,7 @@ const Hero = () => {
   className="min-h-screen  flex items-center justify-center relative overflow-hidden "
 
 >
-     <TorchLight />
+     
       {/* <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: `url(${heroImage})` ,transform: 'scale(1.1)' }}
@@ -23,7 +23,7 @@ const Hero = () => {
 
       <div className="absolute inset-0  " />
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 transition-opacity duration-1000">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           <span className="text-muted-foreground">{t('hero.greeting')}</span>
           <br />
