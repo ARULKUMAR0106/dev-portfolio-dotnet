@@ -4,32 +4,37 @@ const Achievements = () => {
       title: "ERP Module Development",
       description: "Successfully developed from groudup and maintained complex ERP modules using .NET Core 8, ensuring scalability and system stability.",
       year: "2025",
-      icon: "⚙️"
+      icon: "⚙️",
+      color: " border-green-500"  
     },
     {
       title: ".NET Core 8 WebAPI with Entity Framework Core",
       description: "Certified in advanced .NET Core 8 development with Entity Framework Core, demonstrating expertise in modern web API development.",
       year: "2024",
-      icon: "🏆"
+      icon: "🏆",
+      color: " border-pink-500"  
     },
     {
       title: "ISO 27001:2013 - Awareness Workshop",
       description: "Completed ISO 27001:2013 awareness training, gaining knowledge in information security management systems and best practices.",
       year: "2024",
-      icon: "🔒"
+      icon: "🔒",
+      color: " border-red-500"  
     },
 
     {
       title: "Database Performance Optimization",
       description: "Optimized SQL Server queries and stored procedures, achieving significant performance improvements in production environments.",
       year: "2023",
-      icon: "⚡"
+      icon: "⚡",
+      color: " border-cyan-500"  
     },
     {
       title: "Third-party System Integration",
       description: "Designed and implemented seamless integrations with third-party systems using RESTful APIs and secure data exchange protocols.",
       year: "2023",
-      icon: "🔗"
+      icon: "🔗",
+      color: " border-purple-500"  
     },
  
   ];
@@ -48,7 +53,7 @@ const Achievements = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((achievement, index) => (
-            <div key={index} className="portfolio-card group">
+            <div key={index} className={`portfolio-card group${achievement.color} border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`}>
               <div className="text-3xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {achievement.icon}
               </div>
@@ -66,7 +71,7 @@ const Achievements = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="portfolio-card-connect inline-block">
+          <div className="portfolio-card-connect inline-block border-yellow-500 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
             <h3 className="text-lg font-semibold text-primary mb-2">
               Let's Connect
             </h3>

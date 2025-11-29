@@ -11,7 +11,8 @@ const Experience = () => {
         "Collaborated on new development and enhancements, following best coding practices and using Git for version control."
       ],
       technologies: [".NET Core 8", "C#", "SQL Server", "WPF", "RESTful APIs", "Git"],
-      current: true
+      current: true,
+        color:" border-cyan-500"
     },
     {
       title: "Associate Developer",
@@ -24,7 +25,8 @@ const Experience = () => {
         "Worked in Agile environment using Jira for task tracking and collaborated on releases to deliver high-quality solutions."
       ],
       technologies: ["ASP.NET", "C#", "HTML", "CSS", "JavaScript", "SQL Server", "AWS S3", "Jira"],
-      current: false
+      current: false,
+      color:" border-purple-500"
     },
     {
       title: "Full-stack Developer Intern",
@@ -35,7 +37,8 @@ const Experience = () => {
         "Assisted in troubleshooting and debugging application errors during development, laying a strong foundation for application support and maintenance skills."
       ],
       technologies: ["ASP.NET Core MVC", "SQL Server", "CRUD Operations", "Debugging"],
-      current: false
+      current: false,
+        color:" border-red-500"
     }
   ];
 
@@ -67,7 +70,7 @@ const Experience = () => {
               
               {/* Experience Card */}
               <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                <div className="portfolio-card relative">
+                <div className={`portfolio-card relative  ${exp.color} border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`}>
                   {/* Arrow pointing to timeline */}
                   <div className={`absolute top-6 w-4 h-4 bg-card border-l border-t border-border transform rotate-45 ${index % 2 === 0 ? 'md:-right-2' : 'md:-left-2'} hidden md:block`}></div>
                   

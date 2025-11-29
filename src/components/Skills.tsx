@@ -1,31 +1,37 @@
+import { color } from "framer-motion";
+
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
       skills: [
         "C#", "Python", "SQL", "JavaScript", "HTML5", "CSS3"
-      ]
+      ],
+      color: " border-purple-500"
     },
     {
       title: "Frameworks & Libraries",
       skills: [
         ".NET 8", "ASP.NET Core", "Entity Framework Core", "Web API", 
         "LINQ", "WPF", "XAML"
-      ]
+      ],
+       color: " border-cyan-500"
     },
     {
       title: "Databases & Cloud",
       skills: [
         "Microsoft SQL Server", "Stored Procedures", "Views", "Triggers", 
         "Performance Tuning", "Azure DevOps", "AWS S3"
-      ]
+      ],
+       color: " border-red-500"
     },
     {
       title: "DevOps & Emerging Tech",
       skills: [
         "Git", "Postman", "Visual Studio", "VS Code", 
         "JWT", "OAuth2.0", "Role-based Access Control", "Agile/Scrum", "AI Prompting"
-      ]
+      ],
+       color: " border-orange-500"
     }
   ];
 
@@ -43,7 +49,7 @@ const Skills = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="portfolio-card">
+            <div key={index} className={`portfolio-card ${category.color} border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`}>
               <h3 className="text-xl font-semibold text-primary mb-4" style={{ textDecoration: 'underline' }}>
                 {category.title}
               </h3>
@@ -59,7 +65,7 @@ const Skills = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <div className="portfolio-card inline-block">
+          <div className="portfolio-card inline-block border-pink-500 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
             <h3 className="text-lg font-semibold text-primary mb-2">
               Current Focus
             </h3>
