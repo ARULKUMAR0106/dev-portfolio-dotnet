@@ -12,7 +12,7 @@ const Experience = () => {
       ],
       technologies: [".NET Core 8", "C#", "SQL Server", "WPF", "RESTful APIs", "Git"],
       current: true,
-        color:" border-cyan-500"
+        color:" border-cyan-400"
     },
     {
       title: "Associate Developer",
@@ -26,7 +26,7 @@ const Experience = () => {
       ],
       technologies: ["ASP.NET", "C#", "HTML", "CSS", "JavaScript", "SQL Server", "AWS S3", "Jira"],
       current: false,
-      color:" border-purple-500"
+      color:" border-purple-400"
     },
     {
       title: "Full-stack Developer Intern",
@@ -38,7 +38,7 @@ const Experience = () => {
       ],
       technologies: ["ASP.NET Core MVC", "SQL Server", "CRUD Operations", "Debugging"],
       current: false,
-        color:" border-red-500"
+        color:" border-red-400"
     }
   ];
 

@@ -5,21 +5,21 @@ const Achievements = () => {
       description: "Successfully developed from groudup and maintained complex ERP modules using .NET Core 8, ensuring scalability and system stability.",
       year: "2025",
       icon: "⚙️",
-      color: " border-green-500"  
+      color: " border-green-400"  
     },
     {
       title: ".NET Core 8 WebAPI with Entity Framework Core",
       description: "Certified in advanced .NET Core 8 development with Entity Framework Core, demonstrating expertise in modern web API development.",
       year: "2024",
       icon: "🏆",
-      color: " border-pink-500"  
+      color: " border-pink-400"  
     },
     {
       title: "ISO 27001:2013 - Awareness Workshop",
       description: "Completed ISO 27001:2013 awareness training, gaining knowledge in information security management systems and best practices.",
       year: "2024",
       icon: "🔒",
-      color: " border-red-500"  
+      color: " border-red-400"  
     },
 
     {
@@ -27,14 +27,14 @@ const Achievements = () => {
       description: "Optimized SQL Server queries and stored procedures, achieving significant performance improvements in production environments.",
       year: "2023",
       icon: "⚡",
-      color: " border-cyan-500"  
+      color: " border-cyan-400"  
     },
     {
       title: "Third-party System Integration",
       description: "Designed and implemented seamless integrations with third-party systems using RESTful APIs and secure data exchange protocols.",
       year: "2023",
       icon: "🔗",
-      color: " border-purple-500"  
+      color: " border-purple-400"  
     },
  
   ];
@@ -71,7 +71,7 @@ const Achievements = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="portfolio-card-connect inline-block border-yellow-500 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
+          <div className="portfolio-card-connect inline-block border-yellow-400 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
             <h3 className="text-lg font-semibold text-primary mb-2">
               Let's Connect
             </h3>

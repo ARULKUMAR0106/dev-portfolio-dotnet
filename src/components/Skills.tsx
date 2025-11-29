@@ -7,7 +7,7 @@ const Skills = () => {
       skills: [
         "C#", "Python", "SQL", "JavaScript", "HTML5", "CSS3"
       ],
-      color: " border-purple-500"
+      color: " border-purple-400"
     },
     {
       title: "Frameworks & Libraries",
@@ -15,7 +15,7 @@ const Skills = () => {
         ".NET 8", "ASP.NET Core", "Entity Framework Core", "Web API", 
         "LINQ", "WPF", "XAML"
       ],
-       color: " border-cyan-500"
+       color: " border-cyan-400"
     },
     {
       title: "Databases & Cloud",
@@ -23,7 +23,7 @@ const Skills = () => {
         "Microsoft SQL Server", "Stored Procedures", "Views", "Triggers", 
         "Performance Tuning", "Azure DevOps", "AWS S3"
       ],
-       color: " border-red-500"
+       color: " border-red-400"
     },
     {
       title: "DevOps & Emerging Tech",
@@ -31,7 +31,7 @@ const Skills = () => {
         "Git", "Postman", "Visual Studio", "VS Code", 
         "JWT", "OAuth2.0", "Role-based Access Control", "Agile/Scrum", "AI Prompting"
       ],
-       color: " border-orange-500"
+       color: " border-orange-400"
     }
   ];
 
@@ -65,7 +65,7 @@ const Skills = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <div className="portfolio-card inline-block border-pink-500 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
+          <div className="portfolio-card inline-block border-pink-400 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
             <h3 className="text-lg font-semibold text-primary mb-2">
               Current Focus
             </h3>
