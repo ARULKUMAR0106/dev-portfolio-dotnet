@@ -5,21 +5,21 @@ const Achievements = () => {
       description: "Successfully developed from groudup and maintained complex ERP modules using .NET Core 8, ensuring scalability and system stability.",
       year: "2025",
       icon: "⚙️",
-      color: " border-green-400"  
+      color: " green"  
     },
     {
       title: ".NET Core 8 WebAPI with Entity Framework Core",
       description: "Certified in advanced .NET Core 8 development with Entity Framework Core, demonstrating expertise in modern web API development.",
       year: "2024",
       icon: "🏆",
-      color: " border-pink-400"  
+      color: "pink"  
     },
     {
       title: "ISO 27001:2013 - Awareness Workshop",
       description: "Completed ISO 27001:2013 awareness training, gaining knowledge in information security management systems and best practices.",
       year: "2024",
       icon: "🔒",
-      color: " border-red-400"  
+      color: "red"  
     },
 
     {
@@ -27,14 +27,14 @@ const Achievements = () => {
       description: "Optimized SQL Server queries and stored procedures, achieving significant performance improvements in production environments.",
       year: "2023",
       icon: "⚡",
-      color: " border-cyan-400"  
+      color: " cyan"  
     },
     {
       title: "Third-party System Integration",
       description: "Designed and implemented seamless integrations with third-party systems using RESTful APIs and secure data exchange protocols.",
       year: "2023",
       icon: "🔗",
-      color: " border-purple-400"  
+      color: "purple"  
     },
  
   ];
@@ -53,7 +53,7 @@ const Achievements = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((achievement, index) => (
-            <div key={index} className={`portfolio-card group${achievement.color} border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`}>
+            <div key={index} className={`portfolio-card group border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`} style={{borderColor: achievement.color}}>
               <div className="text-3xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {achievement.icon}
               </div>

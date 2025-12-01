@@ -29,22 +29,22 @@ const About = () => {
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="portfolio-card border-purple-400  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
+              <div className="portfolio-card  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400" style={{borderColor: 'blue'}}>
                 <div className="text-3xl font-bold text-primary mb-1">3+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
-              <div className="portfolio-card border-red-400  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
+              <div className="portfolio-card  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400" style={{borderColor: 'red'}}>
                 <div className="text-3xl font-bold text-primary mb-1">2+</div>
                 <div className="text-sm text-muted-foreground">Enterprise level Projects Completed</div>
               </div>
-                            <div className="portfolio-card border-cyan-400  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400">
+                            <div className="portfolio-card  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400" style={{borderColor: 'cyan'}}>
                 <div className="text-3xl font-bold text-primary mb-1">4+</div>
                 <div className="text-sm text-muted-foreground">Customer support</div>
               </div>
             </div>
           </div>
           
-          <div className="portfolio-card border-blue-500 border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400   ">
+          <div className="portfolio-card  border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400" style={{borderColor: 'purple'}}>
             <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center  h-100  ">
               <div className="text-6xl text-primary">👨‍💻</div>
             </div>

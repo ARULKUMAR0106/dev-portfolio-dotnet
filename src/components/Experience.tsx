@@ -12,7 +12,7 @@ const Experience = () => {
       ],
       technologies: [".NET Core 8", "C#", "SQL Server", "WPF", "RESTful APIs", "Git"],
       current: true,
-        color:" border-cyan-400"
+        color:"cyan"
     },
     {
       title: "Associate Developer",
@@ -26,10 +26,10 @@ const Experience = () => {
       ],
       technologies: ["ASP.NET", "C#", "HTML", "CSS", "JavaScript", "SQL Server", "AWS S3", "Jira"],
       current: false,
-      color:" border-purple-400"
+      color:"purple"
     },
     {
-      title: "Full-stack Developer Intern",
+      title: "Trainee Software Developer",
       company: "Wisetech Source, Tamil Nadu, India",
       period: "April 2022 - June 2022",
       description: [
@@ -38,7 +38,7 @@ const Experience = () => {
       ],
       technologies: ["ASP.NET Core MVC", "SQL Server", "CRUD Operations", "Debugging"],
       current: false,
-        color:" border-red-400"
+        color:"brown"
     }
   ];
 
@@ -70,7 +70,7 @@ const Experience = () => {
               
               {/* Experience Card */}
               <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                <div className={`portfolio-card relative  ${exp.color} border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`}>
+                <div className={`portfolio-card relative   border-l border-r border-t border-b border-dashed border-slate-400 dark:border-slate-400`} style={{borderColor: exp.color}}  >
                   {/* Arrow pointing to timeline */}
                   <div className={`absolute top-6 w-4 h-4 bg-card border-l border-t border-border transform rotate-45 ${index % 2 === 0 ? 'md:-right-2' : 'md:-left-2'} hidden md:block`}></div>
                   
