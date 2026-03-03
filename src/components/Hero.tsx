@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import resumePDF from '/src/assets/Resume/ARULKUMAR.pdf';
+import resumePDF from '/src/assets/Resume/ARULKUMAR_CV.pdf';
 import heroImage from '/src/assets/images/herobg.jpg';
 import { Link } from "react-router-dom";
 import TorchLight from '@/contexts/TorchLight';
@@ -48,7 +48,7 @@ const Hero = () => {
    Resume
 </a>
           </Button> */}
-          <a href={resumePDF} target='_blank' rel="noopener noreferrer" download="ARULKUMAR.pdf">
+          <a href={resumePDF} target='_blank' rel="noopener noreferrer" download="ARULKUMAR_CV.pdf">
             <Button 
               variant="outline" 
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg"
